@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/Soap17/wsHola?Tester" uri="src/conf/xml-resources/web-service-references/wsHola_Tester_1/wsdl/localhost_8080/Soap17/wsHola.tester"/>
+    <system systemId="http://localhost:8080/Soap17/wsHola?WSDL" uri="src/conf/xml-resources/web-service-references/wsHola/wsdl/localhost_8080/Soap17/wsHola.wsdl"/>
+    <system systemId="http://localhost:8080/Soap17/wsHola?xsd=1" uri="src/conf/xml-resources/web-service-references/wsHola/wsdl/localhost_8080/Soap17/wsHola.xsd_1.xsd"/>
+</catalog>
