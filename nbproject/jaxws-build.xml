@@ -43,41 +43,9 @@
             <isset property="conf.dir"/>
         </condition>
     </target>
-    <target name="wsimport-client-wsHola_Tester" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/wsHola_Tester"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/wsHola_Tester" destdir="${build.generated.dir}/jax-wsCache/wsHola_Tester" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/wsHola_Tester/wsdl/localhost_8080/Soap17/wsHola.tester" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Soap17/wsHola?Tester" xnocompile="true" xendorsed="true" package="com.soap.client">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/wsHola_Tester/wsdl/localhost_8080/Soap17/wsHola.tester"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/wsHola_Tester"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/wsHola_Tester">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-wsHola_Tester" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/com/soap/client"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/wsHola_Tester"/>
-    </target>
-    <target name="wsimport-client-wsHola_Tester_1" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/wsHola_Tester_1"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/wsHola_Tester_1" destdir="${build.generated.dir}/jax-wsCache/wsHola_Tester_1" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/wsHola_Tester_1/wsdl/localhost_8080/Soap17/wsHola.tester" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Soap17/wsHola?Tester" xnocompile="true" xendorsed="true" package="com.soap.client">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/wsHola_Tester_1/wsdl/localhost_8080/Soap17/wsHola.tester"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/wsHola_Tester_1"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/wsHola_Tester_1">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-wsHola_Tester_1" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/com/soap/client"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/wsHola_Tester_1"/>
-    </target>
     <target name="wsimport-client-wsHola" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/wsHola"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/wsHola" destdir="${build.generated.dir}/jax-wsCache/wsHola" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/wsHola/wsdl/localhost_8080/Soap17/wsHola.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Soap17/wsHola?WSDL" xnocompile="true" xendorsed="true" package="com.soap.cliente">
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/wsHola" destdir="${build.generated.dir}/jax-wsCache/wsHola" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/wsHola/wsdl/localhost_8080/Soap17/wsHola.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Soap17/wsHola?WSDL" xnocompile="true" xendorsed="true" package="com.soap.client">
             <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/wsHola/wsdl/localhost_8080/Soap17/wsHola.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/wsHola"/>
         </wsimport>
@@ -88,8 +56,8 @@
         </copy>
     </target>
     <target name="wsimport-client-clean-wsHola" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/com/soap/cliente"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/soap/client"/>
         <delete dir="${build.generated.dir}/jax-wsCache/wsHola"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-wsHola_Tester, wsimport-client-wsHola_Tester_1, wsimport-client-wsHola"/>
+    <target name="wsimport-client-generate" depends="wsimport-client-wsHola"/>
 </project>

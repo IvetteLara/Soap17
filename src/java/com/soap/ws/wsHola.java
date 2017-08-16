@@ -11,7 +11,7 @@ import javax.jws.WebParam;
 
 /**
  *
- * @author java
+ * @author ivette.lara
  */
 @WebService(serviceName = "wsHola")
 public class wsHola {

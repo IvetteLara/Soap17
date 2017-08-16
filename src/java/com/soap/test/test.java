@@ -5,7 +5,7 @@
  */
 package com.soap.test;
 
-//import com.soap.cliente.WsHola_Service;
+import com.soap.client.WsHola_Service;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.ws.WebServiceRef;
 
+
 /**
  *
  * @author java
@@ -23,7 +24,8 @@ import javax.xml.ws.WebServiceRef;
 public class test extends HttpServlet {
 
     @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/Soap17/wsHola.wsdl")
-    //private WsHola_Service service;
+    private WsHola_Service service;
+
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -45,7 +47,7 @@ public class test extends HttpServlet {
             out.println("<title>Servlet test</title>");            
             out.println("</head>");
             out.println("<body>");
-            //out.println("<h1>Servlet test at " + hola("Ivette") + "</h1>");
+            out.println("<h1>Servlet test at " + hola("Ivette") + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -91,12 +93,14 @@ public class test extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-/*
+
     private String hola(java.lang.String name) {
         // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
         // If the calling of port operations may lead to race condition some synchronization is required.
-        com.soap.cliente.WsHola port = service.getWsHolaPort();
+        com.soap.client.WsHola port = service.getWsHolaPort();
         return port.hola(name);
     }
-*/
+
+
+
 }
